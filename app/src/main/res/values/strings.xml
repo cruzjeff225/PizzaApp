@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">PizzaApp</string>
+    <string name="title">Ordena tu Pizza Ya</string>
+    <string name="lblName">Nombre del cliente</string>
+    <string name="hintName">Ingresa tu nombre</string>
+    <string name="lblSize">Elige el tamaño de tu pizza</string>
+    <string name="smallPizza">Pequeña</string>
+    <string name="mediumPizza">Mediana</string>
+    <string name="bigPizza">Grande</string>
+    <string name="lblExtras">Ingredientes extra:</string>
+    <string name="extraCheese">Queso extra</string>
+    <string name="extraHam">Jamón</string>
+    <string name="extraPineapple">Piña</string>
+    <string name="extraPepperoni">Pepperoni</string>
+    <string name="btnSend">Enviar pedido</string>
+    <string name="btnCancel">Cancelar</string>
+    <string name="dlgTitle">Confirmar pedido</string>
+    <string name="dlgOrder">Confirmar pedido</string>
+    <string name="dlgCancel">Cancelar</string>
 </resources>

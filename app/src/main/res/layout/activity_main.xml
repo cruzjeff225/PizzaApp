@@ -5,4 +5,212 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <!-- Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:hint="@string/lblName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Choose option size pizza -->
+    <!-- Small Pizza -->
+
+    <!-- Medium Pizza -->
+    <LinearLayout
+        android:id="@+id/opcSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="76dp">
+
+        <ImageView
+            android:id="@+id/imgPequena"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src=""
+            app:srcCompat="@drawable/" />
+
+        <CheckBox
+            android:id="@+id/cbSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/smallPizza" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/opcBig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="230dp">
+
+        <ImageView
+            android:id="@+id/"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src=""
+            app:srcCompat="@drawable/" />
+
+        <CheckBox
+            android:id="@+id/cbBigPizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/bigPizza" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/opcMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="152dp">
+
+        <ImageView
+            android:id="@+id/"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src=""
+            app:srcCompat="@drawable/" />
+
+        <CheckBox
+            android:id="@+id/cbMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/mediumPizza" />
+    </LinearLayout>
+
+    <!-- Big Pizza -->
+
+    <!-- Choose option extras -->
+    <!-- Extra Cheese -->
+
+    <!-- Extra Ham -->
+
+    <!-- Extra Pineapple -->
+
+    <!-- Extra Pepperoni -->
+
+    <LinearLayout
+        android:id="@+id/opcCheese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="689dp">
+
+        <ImageView
+            android:id="@+id/"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/extraCheese"
+            android:src="@drawable/" />
+
+        <CheckBox
+            android:id="@+id/cbQueso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/extraCheese" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/opcHam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="625dp">
+
+        <ImageView
+            android:id="@+id/"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/extraHam"
+            android:src="@drawable/" />
+
+        <CheckBox
+            android:id="@+id/cbQueso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/extraHam" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/opcPineapple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="561dp">
+
+        <ImageView
+            android:id="@+id/"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/extraPineapple"
+            android:src="@drawable/" />
+
+        <CheckBox
+            android:id="@+id/cbQueso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/extraPineapple" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/opcPepperoni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="497dp">
+
+        <ImageView
+            android:id="@+id/"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/extraPepperoni"
+            android:src="@drawable/" />
+
+        <CheckBox
+            android:id="@+id/cbPepperoni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/extraPepperoni" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
