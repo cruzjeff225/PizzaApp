@@ -5,11 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundLight"
     tools:context=".MainActivity">
 
     <!-- Title -->
-
-    <!-- Title for extras -->
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/materialTextView3"
         android:layout_width="271dp"
@@ -20,12 +19,11 @@
         android:hint="@string/title"
         android:textAlignment="center"
         android:textSize="30sp"
+        android:textColor="@color/accent"
         app:autoSizeTextType="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </com.google.android.material.textview.MaterialTextView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/materialTextView"
@@ -37,15 +35,13 @@
         android:hint="@string/lblExtras"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
         app:autoSizeTextType="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </com.google.android.material.textview.MaterialTextView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Name -->
-    <!-- Title for name -->
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvName"
         android:layout_width="179dp"
@@ -56,28 +52,33 @@
         android:hint="@string/hintName"
         android:textAlignment="center"
         android:textSize="15sp"
+        android:textColor="@color/textSecondary"
         app:autoSizeTextType="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </com.google.android.material.textview.MaterialTextView>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlinedTextField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="575dp"
         android:hint="@string/lblName"
+        android:textColorHint="#FFBA08"
+        app:boxBackgroundColor="@color/backgroundLight"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtEditName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#1C1C1C"
+            android:textColorHighlight="#FFBA08"
+            android:textColorHint="#FFBA08"
+            android:textColorLink="#FFBA08" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Choose option size pizza -->
     <!-- Small Pizza -->
     <LinearLayout
         android:id="@+id/opcSmall"
@@ -97,25 +98,25 @@
             android:id="@+id/imgSmallPizza"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            app:srcCompat="@drawable/pizza" />
+            app:srcCompat="@drawable/small" />
 
         <CheckBox
             android:id="@+id/cbSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:text="@string/smallPizza" />
+            android:text="@string/smallPizza"
+            android:textColor="@color/textPrimary" />
 
-        <!-- Price -->
         <TextView
             android:id="@+id/tvPrecioSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="$5.00"
+            android:textColor="@color/accent"
             android:textStyle="bold" />
 
-        <!-- Quantity -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -128,6 +129,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cantidad"
                 android:textSize="10sp"
+                android:textColor="@color/textSecondary"
                 android:textStyle="bold" />
 
             <Spinner
@@ -143,10 +145,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="$0.00"
-                android:textColor="@android:color/holo_green_dark"
+                android:textColor="@color/colorSecondary"
                 android:textStyle="bold" />
         </LinearLayout>
-
     </LinearLayout>
 
     <!-- Medium Pizza -->
@@ -168,14 +169,15 @@
             android:id="@+id/imgMediumPizza"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            app:srcCompat="@drawable/pizza" />
+            app:srcCompat="@drawable/medium" />
 
         <CheckBox
             android:id="@+id/cbMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:text="@string/mediumPizza" />
+            android:text="@string/mediumPizza"
+            android:textColor="@color/textPrimary" />
 
         <!-- Price -->
         <TextView
@@ -184,6 +186,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="$10.00"
+            android:textColor="@color/accent"
             android:textStyle="bold" />
 
         <!-- Quantity -->
@@ -214,7 +217,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="$0.00"
-                android:textColor="@android:color/holo_green_dark"
+                android:textColor="@color/colorSecondary"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
@@ -238,14 +241,15 @@
             android:id="@+id/imgBigPizza"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            app:srcCompat="@drawable/pizza" />
+            app:srcCompat="@drawable/big" />
 
         <CheckBox
             android:id="@+id/cbBigPizza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:text="@string/bigPizza" />
+            android:text="@string/bigPizza"
+            android:textColor="@color/textPrimary" />
 
         <!-- Price -->
         <TextView
@@ -254,6 +258,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="$15.00"
+            android:textColor="@color/accent"
             android:textStyle="bold" />
 
         <!-- Quantity -->
@@ -284,7 +289,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="$0.00"
-                android:textColor="@android:color/holo_green_dark"
+                android:textColor="@color/colorSecondary"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
@@ -310,7 +315,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:contentDescription="@string/extraCheese"
-            app:srcCompat="@drawable/pizza" />
+            app:srcCompat="@drawable/cheese" />
 
         <CheckBox
             android:id="@+id/cbCheese"
@@ -325,6 +330,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:text="$1.50"
+            android:textColor="@color/accent"
             android:textSize="10dp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -346,7 +352,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:contentDescription="@string/extraHam"
-            app:srcCompat="@drawable/pizza" />
+            app:srcCompat="@drawable/ham" />
 
         <CheckBox
             android:id="@+id/cbHam"
@@ -361,6 +367,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:text="$2.50"
+            android:textColor="@color/accent"
             android:textSize="10dp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -385,7 +392,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:contentDescription="@string/extraPepperoni"
-            app:srcCompat="@drawable/pizza" />
+            app:srcCompat="@drawable/pepperoni" />
 
         <CheckBox
             android:id="@+id/cbPepperoni"
@@ -400,6 +407,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:text="$2.50"
+            android:textColor="@color/accent"
             android:textSize="10dp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -422,7 +430,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:contentDescription="@string/extraPineapple"
-            app:srcCompat="@drawable/pizza" />
+            app:srcCompat="@drawable/pineapple" />
 
         <CheckBox
             android:id="@+id/cbPineapple"
@@ -437,6 +445,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:text="$1.75"
+            android:textColor="@color/accent"
             android:textSize="10dp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -450,6 +459,8 @@
         android:layout_marginTop="280dp"
         android:text="@string/btnSend"
         android:textAllCaps="false"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
         app:cornerRadius="8dp"
         app:iconPadding="8dp"
         app:iconTint="@android:color/white"
@@ -506,7 +517,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="$0.00"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="@color/colorSecondary"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/opcCheese"
@@ -518,7 +529,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="$0.00"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="@color/colorSecondary"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -532,7 +543,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="$0.00"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="@color/colorSecondary"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/opcPepperoni"
@@ -544,7 +555,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="$0.00"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="@color/colorSecondary"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/opcHam"
