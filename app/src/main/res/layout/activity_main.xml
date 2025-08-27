@@ -8,12 +8,14 @@
     tools:context=".MainActivity">
 
     <!-- Title -->
+
+    <!-- Title for extras -->
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/materialTextView3"
         android:layout_width="271dp"
         android:layout_height="43dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="35dp"
         android:hint="@string/title"
         android:textAlignment="center"
@@ -25,13 +27,12 @@
 
     </com.google.android.material.textview.MaterialTextView>
 
-    <!-- Title for extras -->
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/materialTextView"
         android:layout_width="271dp"
         android:layout_height="43dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="35dp"
         android:hint="@string/lblExtras"
         android:textAlignment="center"
@@ -44,6 +45,23 @@
     </com.google.android.material.textview.MaterialTextView>
 
     <!-- Name -->
+    <!-- Title for name -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvName"
+        android:layout_width="179dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="35dp"
+        android:hint="@string/hintName"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.google.android.material.textview.MaterialTextView>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlinedTextField"
         android:layout_width="match_parent"
@@ -54,6 +72,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEditName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -65,11 +84,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="48dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView3">
 
@@ -91,8 +111,8 @@
             android:id="@+id/tvPrecioSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$5.00"
             android:layout_marginStart="16dp"
+            android:text="$5.00"
             android:textStyle="bold" />
 
         <!-- Quantity -->
@@ -135,10 +155,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/opcSmall">
 
@@ -160,16 +182,16 @@
             android:id="@+id/tvMediumPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$10.00"
             android:layout_marginStart="16dp"
+            android:text="$10.00"
             android:textStyle="bold" />
 
         <!-- Quantity -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="16dp">
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/lblQuantityMedium"
@@ -183,17 +205,17 @@
                 android:id="@+id/spinnerQuantityMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
-                android:entries="@array/arrayQuantity" />
+                android:entries="@array/arrayQuantity"
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/tvSubtotalMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$0.00"
                 android:layout_marginStart="16dp"
-                android:textStyle="bold"
-                android:textColor="@android:color/holo_green_dark" />
+                android:text="$0.00"
+                android:textColor="@android:color/holo_green_dark"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
@@ -203,10 +225,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/opcMedium">
 
@@ -228,8 +252,8 @@
             android:id="@+id/tvBigPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$15.00"
             android:layout_marginStart="16dp"
+            android:text="$15.00"
             android:textStyle="bold" />
 
         <!-- Quantity -->
@@ -258,10 +282,10 @@
                 android:id="@+id/tvSubtotalBig"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$0.00"
                 android:layout_marginStart="16dp"
-                android:textStyle="bold"
-                android:textColor="@android:color/holo_green_dark" />
+                android:text="$0.00"
+                android:textColor="@android:color/holo_green_dark"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
@@ -289,7 +313,7 @@
             app:srcCompat="@drawable/pizza" />
 
         <CheckBox
-            android:id="@+id/cbQueso"
+            android:id="@+id/cbCheese"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
@@ -423,7 +447,7 @@
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="280dp"
         android:text="@string/btnSend"
         android:textAllCaps="false"
         app:cornerRadius="8dp"
