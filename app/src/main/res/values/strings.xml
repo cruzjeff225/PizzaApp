@@ -7,14 +7,24 @@
     <string name="smallPizza">Pequeña</string>
     <string name="mediumPizza">Mediana</string>
     <string name="bigPizza">Grande</string>
-    <string name="lblExtras">Ingredientes extra:</string>
+    <string name="lblExtras">Ingredientes extra (opcional):</string>
     <string name="extraCheese">Queso extra</string>
     <string name="extraHam">Jamón</string>
     <string name="extraPineapple">Piña</string>
     <string name="extraPepperoni">Pepperoni</string>
-    <string name="btnSend">Enviar pedido</string>
+    <string name="btnSend">Confirmar pedido</string>
     <string name="btnCancel">Cancelar</string>
     <string name="dlgTitle">Confirmar pedido</string>
     <string name="dlgOrder">Confirmar pedido</string>
     <string name="dlgCancel">Cancelar</string>
+
+    <!-- Array for quantity -->
+    <string-array name="arrayQuantity">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>
